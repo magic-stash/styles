@@ -1,0 +1,11 @@
+{
+  "name": "ms-styles",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [ "eyeglass-module" ],
+  "eyeglass": {
+    "sassDir": "styles",
+    "exports": false,
+    "needs": "1.1.2"
+  }
+}
