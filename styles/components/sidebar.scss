@@ -1,0 +1,100 @@
+& {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+  background-color: $color-background-dark;
+}
+
+#sidebar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-shadow: inset -4px -4px rgba(black, 0.2);
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(24px + #{$spacing-normal * 2});
+  padding: $spacing-normal $spacing-comfy;
+}
+
+footer {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: $spacing-comfy;
+
+  background-color: $color-background-dark;
+  box-shadow: inset -4px 0 0 rgba(black, 0.2);
+
+  * + * {
+    margin-left: $spacing-comfy;
+  }
+}
+
+// Sidebar List ================================================================
+
+ul {
+
+  font-size: 2.0rem;
+
+  a {
+    display: block;
+    padding: $spacing-comfy;
+    padding-right: calc(#{$spacing-comfy * 2} + 24px);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.de-em {
+      font-style: oblique;
+    }
+
+
+  }
+
+  li {
+    position: relative;
+
+    &:hover a {
+      background-color: $color-background-dim;
+      box-shadow: inset -4px 0 rgba(black, 0.2);
+      color: white;
+    }
+
+    a.active {
+      background-color: $color-primary-dim;
+      color: white;
+
+      box-shadow: inset -4px 0 rgba(black, 0.2);
+    }
+  }
+
+  button.icon {
+    display: none;
+    position: absolute;
+    right: $spacing-comfy;
+    top: 50%;
+    margin-top: -12px;
+
+    opacity: 0.25;
+
+    color: $color-foreground;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  li:hover button.icon,
+  .active + button.icon {
+    display: flex;
+  }
+
+}

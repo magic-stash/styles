@@ -5,3 +5,9 @@
 @import '_icons';
 @import '_buttons';
 @import '_input';
+
+[role='banner'] { @import 'components/banner'; }
+.content        { display: flex; flex-grow: 1; }
+main            { @import 'components/main'; }
+aside           { @import 'components/sidebar'; }
+.modal          { @import 'components/modal'; }

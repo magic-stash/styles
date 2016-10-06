@@ -1,0 +1,41 @@
+& {
+  flex-grow: 1;
+  position: relative;
+}
+
+.constrained {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 60.0rem;
+  padding: $spacing-comfy;
+  overflow: {
+    x: hidden;
+    y: auto;
+  }
+}
+
+header {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+
+  * + * {
+    margin-left: $spacing-normal;
+  }
+
+}
+
+.spacer {
+  display: block;
+  flex-grow: 1;
+  margin-left: 0;
+}
+
+h1 {
+  align-self: stretch;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
