@@ -1,0 +1,48 @@
+.action-list {
+
+  color: $color-foreground-dark;
+  font-size: 2.0rem;
+
+  > li {
+    height: 36px;
+    margin: $spacing-comfy 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.de-em {
+      font-style: oblique;
+    }
+
+    .icon.stop { display: none; }
+    .icon.play { display: block; }
+
+    &.active {
+      .icon.stop { display: block; }
+      .icon.play { display: none; }
+    }
+
+    &.empty {
+      font-style: oblique;
+    }
+
+    .name {
+      color: $color-foreground;
+    }
+
+    &.active,
+    &.active .name {
+      color: white;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin-left: $spacing-normal;
+    }
+  }
+
+}
