@@ -42,6 +42,8 @@ nav {
     align-items: center;
     padding: 0 $spacing-normal;
 
+    cursor: pointer;
+
     color: mix(white, $color-primary, 65%);
 
     &.active {

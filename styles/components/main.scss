@@ -1,17 +1,15 @@
 & {
   flex-grow: 1;
-  position: relative;
+  overflow: hidden;
 }
 
 .constrained {
-  height: 100%;
-  margin: 0 auto;
-  max-width: 60.0rem;
-  padding: $spacing-comfy;
-  overflow: {
-    x: hidden;
-    y: auto;
+  margin: {
+    left: auto;
+    right: auto;
   }
+  padding: 0 $spacing-comfy;
+  max-width: 60.0rem;
 }
 
 header {

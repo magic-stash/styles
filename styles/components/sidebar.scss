@@ -19,13 +19,18 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: calc(24px + #{$spacing-normal * 2});
-  padding: $spacing-normal $spacing-comfy;
+  height: calc(22px + #{$spacing-comfy * 2});
+  padding: 0 $spacing-comfy;
+
+  & + [type='search'] {
+    margin-top: 0;
+  }
 }
 
 footer {
   display: flex;
   flex-shrink: 0;
+  align-items: center;
   justify-content: center;
   padding: $spacing-comfy;
 
