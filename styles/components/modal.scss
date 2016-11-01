@@ -1,26 +1,27 @@
 .modal-backdrop {
   position: absolute;
-  top: 40px; // Header height
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 30;
 
-  background-color: rgba($color-background-dark, 0.8);
+  background-color: rgba($color-background-medium, 0.8);
+  transition: all 200ms;
 }
 
 .modal-content {
   padding: $spacing-normal;
   position: absolute;
-  top: 40px; // Header height
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
   width: 250px;
   z-index: 31;
 
   background-color: $color-background-light;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 4px rgba(black, 0.2);
+  transition: all 200ms;
 
   .actions {
     display: flex;
@@ -32,4 +33,24 @@
     }
   }
 
+}
+
+&.hidden {
+  .modal-backdrop {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .modal-content {
+    transform: translate(calc(-50% - 150px), calc(-100% - 4px));
+  }
+}
+
+&.shown {
+  .modal-backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal-content {
+    transform: translate(calc(-50% - 150px), 0);
+  }
 }
