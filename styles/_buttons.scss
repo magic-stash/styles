@@ -30,3 +30,20 @@ button[disabled],
 .button[disabled] {
   opacity: 0.25;
 }
+
+.icon:not(svg) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 100%;
+
+  &.danger {
+    border-color: #5c3535;
+    color: #b34f4f;
+  }
+}

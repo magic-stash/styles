@@ -9,7 +9,8 @@
     left: auto;
     right: auto;
   }
-  padding: 0 $spacing-comfy;
+  padding-left: $spacing-comfy;
+  padding-right: $spacing-comfy;
   max-width: 60.0rem;
 }
 
@@ -18,7 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 36px;
+  padding-bottom: $spacing-comfy;
 
   * + * {
     margin-left: $spacing-normal;
