@@ -6,6 +6,6 @@
   "eyeglass": {
     "sassDir": "styles",
     "exports": false,
-    "needs": "1.1.2"
+    "needs": "1.3.1"
   }
 }
