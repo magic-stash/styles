@@ -15,6 +15,11 @@
     color: white;
   }
 
+  &.accent {
+    border-color: $color-primary;
+    color: hsl(hue($color-primary), 100%, 85%);
+  }
+
   &.danger {
     border-color: #5c3535;
     color: #b34f4f;
@@ -22,6 +27,11 @@
     .modal & {
       border-color: #b34f4f;
     }
+  }
+
+  em {
+    font-style: inherit;
+    font-weight: $weight-bold;
   }
 
 }
